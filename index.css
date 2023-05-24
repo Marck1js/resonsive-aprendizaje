@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ecommerce {
+  display: none;
+}
+
+header {
+  background-color: #12c6e6;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: rgb(85, 83, 83);
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-color: rgb(43, 0, 255);
+}
+
+header p:first-child {
+  margin-top: 20px;
+}
+
+header p:first-child::before {
+  content: "'";
+}
+
+header p:first-child::after {
+  content: "'";
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+@media only screen and (min-width: 480px) {
+  header {
+    height: 60px;
+    background-color: #1295c5;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+    text-decoration: none;
+    color: aliceblue;
+  }
+  ul {
+    flex-direction: row;
+  }
+
+  ul li:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  header p:first-child {
+    margin-top: 0px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  header {
+    padding: 80px;
+  }
+  .ecommerce {
+    display: unset;
+  }
+}
+
+/* ----------- Seccion Imagenes ------------ */
+
+.seccion-imagenes {
+  margin-top: 20px;
+  background-color: gray;
+  padding-bottom: 40px;
+}
+
+.seccion-imagenes__ver-proyectos {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #d2d5d1;
+  font-weight: 800;
+}
+
+.seccion-imagenes__imagenes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.seccion-imagenes__imagenes img {
+  width: 300px;
+  height: 300px;
+}
+
+@media only screen and (min-width: 480px) {
+  .seccion-imagenes {
+    margin-top: 0px;
+  }
+
+  .seccion-imagenes__ver-proyectos {
+    font-size: 40px;
+  }
+
+  .seccion-imagenes__imagenes {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 630px;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .seccion-imagenes__ver-proyectos {
+    font-size: 50px;
+    padding: 35px 0;
+    text-decoration: underline;
+    text-underline-offset: 15px;
+    text-decoration-color: chocolate;
+  }
+
+  .seccion-imagenes__imagenes {
+    width: 940px;
+  }
+}
+
+/*------ SECCION FOOTER -------- */
+
+.footer {
+  padding: 20px 0;
+  background-color: rgb(0, 132, 255);
+  color: whitesmoke;
+  height: 340px;
+}
+
+.footer__follow,
+.footer__rights,
+.footer__address {
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.footer__socialmedia {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer__socialmedia a {
+  background-color: rgb(11, 11, 11);
+  text-decoration: none;
+  padding: 5px 15px;
+  color: white;
+}
+
+.footer__socialmedia a:hover {
+  outline: 2px solid white;
+  color: rgb(200, 200, 200);
+  outline-offset: 4px;
+}
+
+.footer__rights {
+  margin: 20px 0;
+}
+
+@media only screen and (min-width: 480px) {
+  .footer {
+    font-size: 24px;
+    height: 200px;
+  }
+
+  .footer__socialmedia {
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .footer {
+    font-size: 30px;
+  }
+
+  .footer__follow {
+    letter-spacing: 4px;
+  }
+}
